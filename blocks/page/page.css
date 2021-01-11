@@ -1,0 +1,13 @@
+.page {
+	margin: 0 auto;
+	max-width: 1280px;
+	margin: 0 auto;
+	font-family: "Inter", Arial, sans-serif;
+	padding: 0 19px 0 19px;
+}
+
+@media screen and (max-width: 370px) {
+	.page {
+		padding: 0;
+	}
+}

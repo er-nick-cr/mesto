@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="body">
+	<div class="page">
+		
+		<header class="header">
+			<img src="/images/header-logo.svg" alt="Место" class="header__logo">
+		</header>
+
+		<form class="popup">
+			<div class="popup__container">
+				<h2 class="popup__title">Редактировать профиль</h2>
+				<fieldset class="popup__input-container">
+					<input type="text" class="popup__input" value="Жак-Ив Кусто">
+					<input type="text" class="popup__input" value="Исследователь океана">
+				</fieldset>
+				<button class="popup__submit-button overlay cursor">Сохранить</button>
+				<button class="popup__close-icon overlay cursor"></button>
+			</div>
+		</form>
+
+
+
+
+		<section class="profile">
+			<div class="profile__info">
+				<img src="./images/profile-avatar.jpg" alt="Аватар" class="profile__avatar">
+				<div class="profile__name">
+					<h1 class="profile__author">Жак-Ив Кусто<button class="profile__edit-button overlay cursor"></button></h1>
+					<p class="profile__description">Исследователь океана</p>
+				</div>
+			</div>
+			<button class="profile__add-button overlay cursor"></button>
+		</section>
+
+		<section class="elements">
+			<div class="element">
+				<img src="./images/element-karachaevsk.jpg" alt="Карачевск" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Карачаевск</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+			<div class="element">
+				<img src="./images/element-elbrus.jpg" alt="Эльбрус" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Гора Эльбрус</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+			<div class="element">
+				<img src="./images/element-dombay.jpg" alt="Домбай" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Домбай</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+			<div class="element">
+				<img src="./images/element-elbrus2.jpg" alt="Эльбрус" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Гора Эльбрус</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+			<div class="element">
+				<img src="./images/element-dombay2.jpg" alt="Домбай" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Домбай</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+			<div class="element">
+				<img src="./images/element-karachaevo-cherkesk.jpg" alt="Карачаево-Черкесия" class="element__pic">
+				<div class="element__footer">
+					<p class="element__description">Карачаево-Черкесия</p>
+					<img src="./images/element-like.svg" alt="Лайк" class="element__like overlay cursor">
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<p class="footer__copyright">&COPY; Mesto Russia</p>
+		</footer>
+	</div>
+	<script src="./blocks/popup/popup.js"></script>
+</body>
+</html>
