@@ -1,10 +1,9 @@
 .profile__edit-button {
 	width: 24px;
 	height: 24px;
-	align-self: baseline;
+	align-self: end;
 	background-color: #000000;
 	border: 1px solid #ffffff;
-	margin-left: 18px;
 	background-image: url(../../../images/profile-button.svg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -21,6 +20,7 @@
 		width: 18px;
 		height: 18px;
 		position: absolute;
-		bottom: 0;
+		right: -30px;
+		top: 8px;
 	}
 }

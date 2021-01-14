@@ -13,3 +13,10 @@
 .popup__close-icon:focus {
 	outline: none;
 }
+
+@media screen and (max-width: 550px) {
+	.popup__close-icon {
+		right: 0;
+		top: -55px;
+	}
+}
