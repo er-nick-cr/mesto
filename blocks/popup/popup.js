@@ -1,7 +1,5 @@
-let body = document.querySelector('.body');
-let page = body.querySelector('.page');
-let popup = page.querySelector('.popup');
-let profile = page.querySelector('.profile');
+let popup = document.querySelector('.popup');
+let profile = document.querySelector('.profile');
 let profileInfo = profile.querySelector('.profile__info');
 let profileName = profileInfo.querySelector('.profile__name');
 
@@ -25,6 +23,9 @@ function handleFormSubmit (evt) {
 
     let nameInputValue = nameInput.value;
     let jobInputValue = jobInput.value;
+
+    console.log(nameInputValue);
+    console.log(jobInputValue);
     // Получите значение полей из свойства value
     let profileAuthor = profileName.querySelector('.profile__author');
     let profileDescription = profileName.querySelector('.profile__description');
@@ -46,9 +47,9 @@ popupSubmitButton.addEventListener('click', function () {
 });
 
 let closeButton = formContainer.querySelector('.popup__close-icon');
-closeButton.addEventListener('click',  function () {
-    evt.preventDefault();
+closeButton.addEventListener('click',  function (a) {
+    a.preventDefault();
     popup.classList.remove('popup_opened');
 });
 
-console,log(closeButton.classList);
+console.log(closeButton.classList);
