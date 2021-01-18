@@ -24,3 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  src: url('../fonts/Inter-Medium.woff2') format("woff2");
+  src: url('../fonts/Inter-Medium.woff') format("woff");
+  font-family: 'Inter';
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

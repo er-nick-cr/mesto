@@ -11,7 +11,7 @@
 		font-size: 27px;
 		line-height: 33px;
 		text-align: center;
-		position: relative;
-		height: 26px;
+		grid-row: 1/1;
+		grid-column: 1/1;
 	}
 }

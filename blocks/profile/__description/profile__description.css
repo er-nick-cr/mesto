@@ -5,9 +5,13 @@
 	margin: 0;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 690px) {
 	.profile__description {
 		font-size: 14px;
 		line-height: 17px;
+		align-self: center;
+		justify-self: center;
+		grid-column: 1/1;
+		grid-row: 2/2;
 	}
 }
