@@ -8,6 +8,8 @@
 	right: -40px;
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	padding: 0;
 }
 
 .popup__close-icon:focus {

@@ -8,88 +8,81 @@
 </head>
 <body class="body">
 	<div class="page">
-		
 		<header class="header">
 			<img src="./images/header-logo.svg" alt="Место" class="header__logo">
 		</header>
-
-		<form class="popup">
-			<div class="popup__container">
-				<h2 class="popup__title">Редактировать профиль</h2>
-				<fieldset class="popup__input-container">
-					<input type="text" class="popup__input" value="Жак-Ив Кусто">
-					<input type="text" class="popup__input" value="Исследователь океана">
-				</fieldset>
-				<button class="popup__submit-button overlay cursor">Сохранить</button>
-				<button class="popup__close-icon overlay cursor"></button>
-			</div>
-		</form>
-
-
-
-
-		<section class="profile">
-			<div class="profile__info">
-				<img src="./images/profile-avatar.jpg" alt="Аватар" class="profile__avatar">
-				<div class="profile__name">
-					<h1 class="profile__author">Жак-Ив Кусто</h1>
-					<button class="profile__edit-button overlay cursor"></button>
-					<p class="profile__description">Исследователь океана</p>
+		<main>
+			<section class="profile">
+				<div class="profile__info">
+					<img src="./images/profile-avatar.jpg" alt="Аватар" class="profile__avatar">
+					<div class="profile__name">
+						<h1 class="profile__author">Жак-Ив Кусто</h1>
+						<button type="button" class="profile__edit-button overlay cursor"></button>
+						<p class="profile__description">Исследователь океана</p>
+					</div>
 				</div>
-			</div>
-			<button class="profile__add-button overlay cursor"></button>
-		</section>
-
-		<section class="elements">
-			<div class="element">
-				<img src="./images/element-karachaevsk.jpg" alt="Карачевск" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Карачаевск</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-			<div class="element">
-				<img src="./images/element-elbrus.jpg" alt="Эльбрус" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Гора Эльбрус</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-			<div class="element">
-				<img src="./images/element-dombay.jpg" alt="Домбай" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Домбай</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-			<div class="element">
-				<img src="./images/element-elbrus2.jpg" alt="Эльбрус" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Гора Эльбрус</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-			<div class="element">
-				<img src="./images/element-dombay2.jpg" alt="Домбай" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Домбай</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-			<div class="element">
-				<img src="./images/element-karachaevo-cherkesk.jpg" alt="Карачаево-Черкесия" class="element__pic">
-				<div class="element__footer">
-					<p class="element__description">Карачаево-Черкесия</p>
-					<div class="element__like overlay cursor"></div>
-				</div>
-			</div>
-		</section>
-
+				<button class="profile__add-button overlay cursor"></button>
+			</section>
+			<section class="elements">
+				<article class="element">
+					<img src="./images/element-karachaevsk.jpg" alt="Карачевск" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Карачаевск</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+				<article class="element">
+					<img src="./images/element-elbrus.jpg" alt="Эльбрус" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Гора Эльбрус</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+				<article class="element">
+					<img src="./images/element-dombay.jpg" alt="Домбай" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Домбай</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+				<article class="element">
+					<img src="./images/element-elbrus2.jpg" alt="Эльбрус" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Гора Эльбрус</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+				<article class="element">
+					<img src="./images/element-dombay2.jpg" alt="Домбай" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Домбай</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+				<article class="element">
+					<img src="./images/element-karachaevo-cherkesk.jpg" alt="Карачаево-Черкесия" class="element__pic">
+					<div class="element__footer">
+						<h2 class="element__description">Карачаево-Черкесия</h2>
+						<button type="button" class="element__like overlay cursor"></button>
+					</div>
+				</article>
+			</section>
+			<section class="popup">
+				<form class="popup__container">
+					<h2 class="popup__title">Редактировать профиль</h2>
+					<fieldset class="popup__input-container">
+						<input type="text" name="name" class="popup__input popup__input_type_name">
+						<input type="text" name="description" class="popup__input popup__input_type_description">
+					</fieldset>
+					<button type="submit" class="popup__submit-button cursor">Сохранить</button>
+					<button type="button" aria-label="Close" class="popup__close-icon overlay cursor"></button>
+				</form>
+			</section>	
+		</main>
 		<footer class="footer">
 			<p class="footer__copyright">&COPY; Mesto Russia</p>
 		</footer>
-	</div>
+		</div>
 	<script src="./scripts/popup.js"></script>
-	<script defer src="./scripts/element.js"></script>
 </body>
 </html>

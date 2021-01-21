@@ -10,6 +10,7 @@
 	background-image: url(../../../images/profile-add-button.svg);
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: 2px;
 }
 
 .profile__add-button:focus {
@@ -20,5 +21,6 @@
 	.profile__add-button {
 		width: 282px;
 		margin: 36px 0 0 0;
+		background-size: 16px;
 	}
 }

@@ -2,6 +2,7 @@
   src: url('../fonts/Inter-Regular.woff2') format("woff2");
   src: url('../fonts/Inter-Regular.woff') format("woff");
   font-family: 'Inter';
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

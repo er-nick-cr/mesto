@@ -1,55 +1,35 @@
 let popup = document.querySelector('.popup');
-let profile = document.querySelector('.profile');
-let profileInfo = profile.querySelector('.profile__info');
-let profileName = profileInfo.querySelector('.profile__name');
-
-let profileEditButton = profileName.querySelector('.profile__edit-button');
-
-
-profileEditButton.addEventListener('click', function () {
-        popup.classList.add('popup_opened');
-    });
-
-// Находим форму в DOM
-let formContainer = popup.querySelector('.popup__container');
+let profileEditButton = document.querySelector('.profile__edit-button');
+let formContainer = document.querySelector('.popup__container');
 let formInputContainer = formContainer.querySelector('.popup__input-container');
+let nameInput = document.querySelector('.popup__input_type_name');
+let jobInput = document.querySelector('.popup__input_type_description');
+let profileAuthor = document.querySelector('.profile__author');
+let profileDescription = document.querySelector('.profile__description');
+let closeButton = formContainer.querySelector('.popup__close-icon');
+let form = document.querySelector('.popup__container');
 
-let popupSubmitButton = formContainer.querySelector('.popup__submit-button');
+function popupOpened () {
+    popup.classList.add('popup_opened');
+    nameInput.value = profileAuthor.textContent;
+    jobInput.value = profileDescription.textContent;
+};
 
 function handleFormSubmit (evt) {
     evt.preventDefault(); 
-    let nameInput = formInputContainer.querySelectorAll('.popup__input')[0];
-    let jobInput = formInputContainer.querySelectorAll('.popup__input')[1];
-
-    let nameInputValue = nameInput.value;
-    let jobInputValue = jobInput.value;
-
-    console.log(nameInputValue);
-    console.log(jobInputValue);
-    // Получите значение полей из свойства value
-    let profileAuthor = profileName.querySelector('.profile__author');
-    let profileDescription = profileName.querySelector('.profile__description');
-    // Выберите элементы, куда должны быть вставлены значения полей
-    profileAuthor.textContent = nameInputValue;
-    profileDescription.textContent = jobInputValue;
-    // Вставьте новые значения с помощью textContent
+    profileAuthor.textContent = nameInput.value;
+    profileDescription.textContent = jobInput.value;
+    popup.classList.remove('popup_opened');
 }
 
-
-
-popupSubmitButton.addEventListener('click', handleFormSubmit);
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-popupSubmitButton.addEventListener('submit', handleFormSubmit); 
-
-popupSubmitButton.addEventListener('click', function () {
-    popup.classList.remove('popup_opened');
-});
-
-let closeButton = formContainer.querySelector('.popup__close-icon');
-closeButton.addEventListener('click',  function (a) {
+function popupClose (a) {
     a.preventDefault();
     popup.classList.remove('popup_opened');
-});
+}
+profileEditButton.addEventListener('click', popupOpened) 
 
-console.log(closeButton.classList);
+form.addEventListener('submit', handleFormSubmit); 
+
+
+closeButton.addEventListener('click', popupClose);
+

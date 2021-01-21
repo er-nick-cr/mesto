@@ -4,4 +4,20 @@
 	background-image: url("../../../images/element-like.svg");
 	outline: none;
 	-webkit-tap-highlight-color: transparent;
+	padding: 0;
+	border: none;
+	background-color: #ffffff;
+	transition: opacity linear 0.5s;
+}
+
+.element__like:focus {
+	outline: none;
+}
+
+.element__like:hover{
+	opacity: 0.5;
+}
+
+.element__like:active{
+	background-image: url("../../../images/element-like-active.svg");
 }
