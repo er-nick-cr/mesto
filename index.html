@@ -8,11 +8,11 @@
 </head>
 <body class="body">
 	<div class="page">
-		<header class="header">
+		<header class="header page__header">
 			<img src="./images/header-logo.svg" alt="Место" class="header__logo">
 		</header>
 		<main>
-			<section class="profile">
+			<section class="profile page__profile">
 				<div class="profile__info">
 					<img src="./images/profile-avatar.jpg" alt="Аватар" class="profile__avatar">
 					<div class="profile__name">
@@ -21,9 +21,9 @@
 						<p class="profile__description">Исследователь океана</p>
 					</div>
 				</div>
-				<button class="profile__add-button overlay cursor"></button>
+				<button type="button" class="profile__add-button overlay cursor"></button>
 			</section>
-			<section class="elements">
+			<section class="elements page__elements">
 				<article class="element">
 					<img src="./images/element-karachaevsk.jpg" alt="Карачевск" class="element__pic">
 					<div class="element__footer">
@@ -68,7 +68,7 @@
 				</article>
 			</section>
 			<section class="popup">
-				<form class="popup__container">
+				<form name ="edit" class="popup__container">
 					<h2 class="popup__title">Редактировать профиль</h2>
 					<fieldset class="popup__input-container">
 						<input type="text" name="name" class="popup__input popup__input_type_name">
@@ -79,7 +79,7 @@
 				</form>
 			</section>	
 		</main>
-		<footer class="footer">
+		<footer class="footer page__footer">
 			<p class="footer__copyright">&COPY; Mesto Russia</p>
 		</footer>
 		</div>
