@@ -1,0 +1,12 @@
+@keyframes transition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.popup-animation {
+    animation: transition linear 0.3s;
+}

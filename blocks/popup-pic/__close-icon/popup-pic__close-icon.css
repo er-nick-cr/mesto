@@ -1,0 +1,29 @@
+.popup-pic__close-icon {
+    width: 40px;
+	height: 40px;
+	background-image: url(../../../images/popup-closeIcon.svg);
+	background-position: center;
+	background-size: 57px 57px;
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	padding: 0;
+	transform: rotate(-45deg);
+}
+
+.popup-pic__close-icon:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 550px) {
+	.popup-pic__close-icon {
+		right: 0;
+		top: -40px;
+		width: 26px;
+		height: 26px;
+		background-size: 37px 37px;
+	}
+}

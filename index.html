@@ -30,7 +30,7 @@
 		<footer class="footer page__footer">
 			<p class="footer__copyright">&COPY; Mesto Russia</p>
 		</footer>
-		<section class="popup popup_type_edit">
+		<section class="popup popup_type_edit popup-animation">
 			<form name ="edit" class="popup__container popup__container_type_edit">
 				<h2 class="popup__title">Редактировать профиль</h2>
 				<fieldset class="popup__input-container">
@@ -41,7 +41,7 @@
 				<button type="button" aria-label="Close" class="popup__close-icon popup__close-icon_type_edit overlay cursor"></button>
 			</form>
 		</section>
-		<section class="popup popup_type_add">
+		<section class="popup popup_type_add popup-animation">
 			<form name ="edit" class="popup__container popup__container_type_add">
 				<h2 class="popup__title">Новое место</h2>
 				<fieldset class="popup__input-container">
@@ -54,19 +54,24 @@
 		</section>		
 		<template class="template-element">
 			<article class="element">
-				<img src=" " alt="" class="element__pic">
+				<img src=" " alt="" class="element__pic cursor">
 				<div class="element__footer">
 					<h2 class="element__description"></h2>
 					<button type="button" class="element__like overlay cursor"></button>
 				</div>
 				<button type="button" class="element__delete overlay cursor"></button>
 			</article>
-		</template>	
+		</template>
+		<template class="template-popup-pic"> 
+			<section class="popup-pic popup-animation">
+				<figure class="popup-pic__figure">
+					<img class="popup-pic__img" src="" alt="">
+					<figcaption class="popup-pic__caption"></figcaption>
+					<button type="button" class="popup-pic__close-icon overlay cursor"></button>
+				</figure>
+			</section>
+		</template>
 		</div>
-	<script src="./scripts/elements.js"></script>
-	<script src="./scripts/popup_type_edit.js"></script>
-	<script src="./scripts/popup_type_add.js"></script>
-	<script src="./scripts/elemen__like_active.js"></script>
-	<script src="scripts/element__delete.js"></script>
+	<script src="./scripts/script.js"></script>
 </body>
 </html>
