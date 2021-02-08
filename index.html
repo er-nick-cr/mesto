@@ -34,8 +34,8 @@
 			<form name ="edit" class="popup__container popup__container_type_edit">
 				<h2 class="popup__title">Редактировать профиль</h2>
 				<fieldset class="popup__input-container">
-					<input type="text" name="name" class="popup__input popup__input_type_name">
-					<input type="text" name="description" class="popup__input popup__input_type_description">
+					<input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите имя">
+					<input type="text" name="description" class="popup__input popup__input_type_description" placeholder="Добавьте описание">
 				</fieldset>
 				<button type="submit" class="popup__submit-button cursor">Сохранить</button>
 				<button type="button" aria-label="Close" class="popup__close-icon popup__close-icon_type_edit overlay cursor"></button>
@@ -51,6 +51,13 @@
 				<button type="submit" class="popup__submit-button cursor">Создать</button>
 				<button type="button" aria-label="Close" class="popup__close-icon popup__close-icon_type_add overlay cursor"></button>
 			</form>
+		</section>
+		<section class="popup popup_type_mesto popup-animation">
+			<figure class="popup__figure">
+				<img class="popup__img" src=" " alt="">
+				<figcaption class="popup__caption"></figcaption>
+				<button type="button" class="popup__close-icon popup__close-icon_type_mesto overlay cursor"></button>
+			</figure>
 		</section>		
 		<template class="template-element">
 			<article class="element">
@@ -61,15 +68,6 @@
 				</div>
 				<button type="button" class="element__delete overlay cursor"></button>
 			</article>
-		</template>
-		<template class="template-popup-pic"> 
-			<section class="popup-pic popup-animation">
-				<figure class="popup-pic__figure">
-					<img class="popup-pic__img" src=" " alt="">
-					<figcaption class="popup-pic__caption"></figcaption>
-					<button type="button" class="popup-pic__close-icon overlay cursor"></button>
-				</figure>
-			</section>
 		</template>
 		</div>
 	<script src="./scripts/script.js"></script>
