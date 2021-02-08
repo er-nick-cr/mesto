@@ -78,10 +78,10 @@ function setCards (item) {
   // Открытие попапа с картинкой
   cardPic.addEventListener('click', () => popupOpen(popupMesto));
   cardPic.addEventListener('click', setPopupPic);
-  closeButtonMesto.addEventListener('click', () => popupClose(popupMesto))
+  closeButtonMesto.addEventListener('click', () => popupClose(popupMesto));
   // 
-  addButton.addEventListener('click', () => popupOpen(popupAdd))
-  closeButtonAdd.addEventListener('click', () => popupClose(popupAdd))
+  addButton.addEventListener('click', () => popupOpen(popupAdd));
+  closeButtonAdd.addEventListener('click', () => popupClose(popupAdd));
   cardPic.src = item.link;
   cardPic.alt = item.name;
   cardDesc.textContent = item.name;
@@ -102,14 +102,17 @@ function handleFormSubmitAdd (evt) {
   const newCard = {name: mestoInput.value, link: linkInput.value}
   const card = setCards(newCard);
   elements.append(card);
-  popupClose(popupAdd)
+  document.querySelector('.popup__container_type_add').reset();
+  popupClose(popupAdd);
 }
 
-saveAdd.addEventListener('submit', handleFormSubmitAdd) 
+saveAdd.addEventListener('submit', handleFormSubmitAdd);
+
+
 
 function popupEditOpen () {
   profileEditButton.addEventListener('click', () => popupOpen(popupEdit));
-  closeButton.addEventListener('click', () =>  popupClose(popupEdit))
+  closeButton.addEventListener('click', () =>  popupClose(popupEdit));
   nameInput.value = profileAuthor.textContent;
   jobInput.value = profileDescription.textContent;
 };
@@ -123,7 +126,7 @@ function handleFormSubmit (evt) {
     popupClose(popupEdit);
 }
 
-profileEditButton.addEventListener('click', popupOpened) 
+profileEditButton.addEventListener('click', popupOpened);
 
 saveEdit.addEventListener('submit', handleFormSubmit); 
 
