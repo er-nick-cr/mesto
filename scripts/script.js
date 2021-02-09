@@ -48,8 +48,6 @@ const body = document.querySelector('.body');
 
 const addLike = (event) => event.target.classList.toggle('element__like_active');
 const deleteCard = (event) => event.target.closest('.element').remove();
-const deletePopup = (event) => event.target.closest('.popup-pic').remove();
-const popupOpened = (event) => event.target.classList.add('popup_opened');
 
 
 function popupOpen (arg) {
@@ -62,8 +60,11 @@ function popupClose (arg) {
 
 // значения попапа с картинкой
 function setPopupPic (event) {
+  popupOpen(popupMesto);
   document.querySelector('.popup__img').src = event.target.getAttribute('src');
+  document.querySelector('.popup__img').alt = event.target.getAttribute('alt')
   document.querySelector('.popup__caption').textContent = event.target.getAttribute('alt');
+  
   
 }
 
@@ -75,13 +76,9 @@ function setCards (item) {
   const elDel = card.querySelector('.element__delete');
   elLike.addEventListener('click', addLike);
   elDel.addEventListener('click', deleteCard);
-  // Открытие попапа с картинкой
-  cardPic.addEventListener('click', () => popupOpen(popupMesto));
   cardPic.addEventListener('click', setPopupPic);
-  closeButtonMesto.addEventListener('click', () => popupClose(popupMesto));
-  // 
   addButton.addEventListener('click', () => popupOpen(popupAdd));
-  closeButtonAdd.addEventListener('click', () => popupClose(popupAdd));
+  
   cardPic.src = item.link;
   cardPic.alt = item.name;
   cardDesc.textContent = item.name;
@@ -101,7 +98,7 @@ function handleFormSubmitAdd (evt) {
   // массив с значениями новой карточки
   const newCard = {name: mestoInput.value, link: linkInput.value}
   const card = setCards(newCard);
-  elements.append(card);
+  elements.prepend(card);
   document.querySelector('.popup__container_type_add').reset();
   popupClose(popupAdd);
 }
@@ -126,7 +123,11 @@ function handleFormSubmit (evt) {
     popupClose(popupEdit);
 }
 
-profileEditButton.addEventListener('click', popupOpened);
+closeButtonMesto.addEventListener('click', () => popupClose(popupMesto));
+
+closeButtonAdd.addEventListener('click', () => popupClose(popupAdd));
+
+profileEditButton.addEventListener('click', popupOpen(popupEdit));
 
 saveEdit.addEventListener('submit', handleFormSubmit); 
 
