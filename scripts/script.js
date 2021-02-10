@@ -61,8 +61,9 @@ function popupClose (arg) {
 // значения попапа с картинкой
 function setPopupPic (event) {
   popupOpen(popupMesto);
-  document.querySelector('.popup__img').src = event.target.getAttribute('src');
-  document.querySelector('.popup__img').alt = event.target.getAttribute('alt')
+  const popImg = document.querySelector('.popup__img');
+  popImg.src = event.target.getAttribute('src');
+  popImg.alt = event.target.getAttribute('alt');
   document.querySelector('.popup__caption').textContent = event.target.getAttribute('alt');
   
   
