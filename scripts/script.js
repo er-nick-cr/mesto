@@ -27,6 +27,8 @@ const initialCards = [
 	
 const elementTemp = document.querySelector('.template-element').content;
 const elements = document.querySelector('.elements');
+const popupArr = Array.from(document.querySelectorAll('.popup'));
+const popupCont = Array.from(document.querySelectorAll('.popup__container'))
 const popup = document.querySelector('.popup');
 const profileEditButton = document.querySelector('.profile__edit-button');
 const nameInput = document.querySelector('.popup__input_type_name');
@@ -56,6 +58,7 @@ function popupOpen (arg) {
 
 function popupClose (arg) {
   arg.classList.remove('popup_opened');
+  
 }
 
 // значения попапа с картинкой
@@ -97,7 +100,7 @@ addCards();
 function handleFormSubmitAdd (evt) {
   evt.preventDefault();
   // массив с значениями новой карточки
-  const newCard = {name: mestoInput.value, link: linkInput.value}
+  const newCard = {name: mestoInput.value, link: linkInput.value};
   const card = setCards(newCard);
   elements.prepend(card);
   document.querySelector('.popup__container_type_add').reset();
@@ -134,4 +137,21 @@ saveEdit.addEventListener('submit', handleFormSubmit);
 
 closeButton.addEventListener('click', popupClose(popupEdit));
 
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode === 27) {
+    popupArr.map(popupClose);
+  }
+})
+
+popupArr.forEach((item) => item.addEventListener('click', () => {
+  popupClose(item);
+}
+  ));
+
+function stopEvent (evt) {
+  evt.stopPropagation();
+}
+
+document.querySelectorAll('.popup__container').forEach((item) => item.addEventListener('click', stopEvent));
+document.querySelector('.popup__figure').addEventListener('click', stopEvent);
 

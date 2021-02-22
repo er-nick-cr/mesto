@@ -6,4 +6,5 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
 	row-gap: 30px;
+	position: relative;
 }
