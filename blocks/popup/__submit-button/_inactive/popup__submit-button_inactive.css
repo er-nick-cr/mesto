@@ -5,4 +5,9 @@
     background-color: #ffffff;
     color: #000000;
     opacity: .2;
+    cursor: default;
+}
+
+.popup__submit-button_inactive:hover {
+	opacity: .2;
 }

@@ -47,19 +47,29 @@ const mestoInput = document.querySelector('.popup__input_type_mesto');
 const linkInput = document.querySelector('.popup__input_type_link');
 const saveAdd = document.querySelector('.popup__container_type_add');
 const body = document.querySelector('.body');
+const subBtnAdd = document.querySelector('.popup__submit-button_type_add');
 
 const addLike = (event) => event.target.classList.toggle('element__like_active');
 const deleteCard = (event) => event.target.closest('.element').remove();
-
+const escClose = () => document.addEventListener('keydown', function (event) {
+  if (event.key === "Escape") {
+    popupArr.map(popupClose);
+  }
+})
 
 function popupOpen (arg) {
   arg.classList.add('popup_opened');
+  escClose();
 }
 
 function popupClose (arg) {
   arg.classList.remove('popup_opened');
-  
-}
+  document.removeEventListener('keydown', function (event) {
+    if (event.key === "Escape") {
+      popupArr.map(popupClose);
+    } 
+  }
+  )}
 
 // значения попапа с картинкой
 function setPopupPic (event) {
@@ -105,6 +115,8 @@ function handleFormSubmitAdd (evt) {
   elements.prepend(card);
   document.querySelector('.popup__container_type_add').reset();
   popupClose(popupAdd);
+  subBtnAdd.classList.add('popup__submit-button_inactive');
+  subBtnAdd.setAttribute('disabled', true);
 }
 
 saveAdd.addEventListener('submit', handleFormSubmitAdd);
@@ -137,11 +149,7 @@ saveEdit.addEventListener('submit', handleFormSubmit);
 
 closeButton.addEventListener('click', popupClose(popupEdit));
 
-document.addEventListener('keydown', function (event) {
-  if (event.keyCode === 27) {
-    popupArr.map(popupClose);
-  }
-})
+
 
 popupArr.forEach((item) => item.addEventListener('click', () => {
   popupClose(item);
