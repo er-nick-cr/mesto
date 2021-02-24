@@ -51,25 +51,22 @@ const subBtnAdd = document.querySelector('.popup__submit-button_type_add');
 
 const addLike = (event) => event.target.classList.toggle('element__like_active');
 const deleteCard = (event) => event.target.closest('.element').remove();
-const escClose = () => document.addEventListener('keydown', function (event) {
+const escClose = (event) => {
+  const popupOpnd = document.querySelector('.popup_opened');
   if (event.key === "Escape") {
-    popupArr.map(popupClose);
+    popupClose(popupOpnd);
   }
-})
+}
 
 function popupOpen (arg) {
   arg.classList.add('popup_opened');
-  escClose();
+  document.addEventListener('keydown', escClose);
 }
 
 function popupClose (arg) {
   arg.classList.remove('popup_opened');
-  document.removeEventListener('keydown', function (event) {
-    if (event.key === "Escape") {
-      popupArr.map(popupClose);
-    } 
+  document.removeEventListener('keydown', escClose);
   }
-  )}
 
 // значения попапа с картинкой
 function setPopupPic (event) {
